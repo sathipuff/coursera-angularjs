@@ -13,18 +13,20 @@
      $scope.fontcolour      = "red";
 
      $scope.checkLunchLimit = function(){
-      var lunchLength =  getLunchLength($scope.lunchList,$scope.delimiter);
+      var lunchLength =  getLunchLengthByRegex($scope.lunchList,$scope.delimiter);
       console.log(lunchLength);
       updateTxtMsg(lunchLength,$scope.limit);
     };
 
-    function getLunchLength(list, delimiter){
-      if(list=="")
-        return 0;
-
-       var res = list.split(delimiter);
-       return res.length;
-     };
+    function getLunchLengthByRegex(list){
+      var pattern = /([0-9a-zA-Z\-]+),?/g;
+      var matcher;
+      var length = 0;
+      while (matcher = pattern.exec(list)) {
+          length++;
+      }
+      return length;
+    };
 
     function updateTxtMsg(listLength,limit){
       if(listLength == 0){
