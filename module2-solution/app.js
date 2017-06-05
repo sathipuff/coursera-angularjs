@@ -32,23 +32,23 @@ function ShoppingListService() {
   console.log("STart");
   var buyList = [
     {
-      name: "Ben & Jerry Ice Cream",
+      name: "Ben & Jerry Ice Creams",
       quantity: 10
     },
     {
-      name: "Magnum Ice Cream",
+      name: "Magnum Ice Creams",
       quantity: 10
     },
     {
-      name: "Haagen-Dazs Ice Cream",
+      name: "Haagen-Dazs Ice Creams",
       quantity: 10
     },
         {
-      name: "Baskin-Robbins Ice Cream",
+      name: "Baskin-Robbins Ice Creams",
       quantity: 10
     },
         {
-      name: "Dairy Queen Ice Cream",
+      name: "Dairy Queen Ice Creams",
       quantity: 10
     }
 
